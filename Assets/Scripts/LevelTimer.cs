@@ -32,9 +32,20 @@ public class LevelTimer : MonoBehaviour
 
     void LoadPreviousLevel()
     {
-        int currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        int previousSceneIndex = currentSceneIndex > 0 ? currentSceneIndex - 1 : 0;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(previousSceneIndex);
+        var currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+
+        if (currentScene.name == "1")
+        {
+            // Reload the current scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene.name);
+        }
+        else
+        {
+            // Load the previous scene
+            int currentSceneIndex = currentScene.buildIndex;
+            int previousSceneIndex = currentSceneIndex > 0 ? currentSceneIndex - 1 : 0;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(previousSceneIndex);
+        }
     }
 
     public void AddTime(float amount)

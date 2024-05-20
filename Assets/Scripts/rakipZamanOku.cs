@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+    public AudioClip destroySound;
+    public float destroyDelay = 0.2f;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("zamanOku"))

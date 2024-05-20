@@ -7,11 +7,12 @@ TagManager:
   - engel
   - rakip
   - tas
-  - elektrikliOk
   - darbeliOk
   - zamanOku
   - lav
   - zemin
+  - su
+  - kirilmazOk
   layers:
   - Default
   - TransparentFX

@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class launcher : MonoBehaviour
 {
-    public GameObject[] arrowPrefabs; // Ok prefab'larý için dizi
-    [SerializeField] Transform spawnPoint; // Oklarýn fýrlatýlacaðý nokta
-    public Transform spriteTransform; // Sprite'in transformu
-    [SerializeField] LineRenderer linerenderer; // Line Renderer bileþeni
+    public GameObject[] arrowPrefabs; 
+    [SerializeField] Transform spawnPoint;
+    public Transform spriteTransform; 
+    [SerializeField] LineRenderer linerenderer; 
 
-    [SerializeField] float launchForce = 1.5f; // Fýrlatma kuvveti
-    [SerializeField] float trajectoryTimeStep = 0.1f; // Yörünge adým süresi
-    [SerializeField] int trajectoryStepCount = 15; // Yörünge adým sayýsý
-    private int currentArrowIndex = 0; // Þu anki okun dizinini tutar
-    private int remainingArrows; // Kalan ok sayýsý
+    [SerializeField] float launchForce = 1.5f;
+    [SerializeField] float trajectoryTimeStep = 0.1f;
+    [SerializeField] int trajectoryStepCount = 15;
+    private AudioSource _audio;
+    private int currentArrowIndex = 0;
+    private int remainingArrows;
 
-    Vector2 velocity, startMousePos, currentMousePos; // Hýz ve fare pozisyonlarý
+    Vector2 velocity, startMousePos, currentMousePos;
 
+    private void Awake()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
     private void Start()
     {
-        remainingArrows = arrowPrefabs.Length+1; // Baþlangýçta kalan ok sayýsý, ok prefab'larýnýn sayýsýna eþit
+        remainingArrows = arrowPrefabs.Length+1;
     }
 
     private void Update()
@@ -32,6 +37,7 @@ public class launcher : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             startMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _audio.Play();
         }
 
         if (Input.GetMouseButton(0))

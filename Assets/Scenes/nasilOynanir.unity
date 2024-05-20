@@ -530,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -333}
+  m_AnchoredPosition: {x: 89, y: -354}
   m_SizeDelta: {x: 389.1315, y: 72.9621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494237249
@@ -650,6 +650,7 @@ GameObject:
   - component: {fileID: 518584232}
   - component: {fileID: 518584234}
   - component: {fileID: 518584233}
+  - component: {fileID: 518584235}
   m_Layer: 5
   m_Name: "nas\u0131lOynan\u0131r"
   m_TagString: Untagged
@@ -773,6 +774,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518584231}
   m_CullTransparentMesh: 1
+--- !u!95 &518584235
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518584231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa46f401ecaa1e24aaf5e1adda684dd7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &548485228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,6 +876,7 @@ GameObject:
   - component: {fileID: 635483087}
   - component: {fileID: 635483086}
   - component: {fileID: 635483085}
+  - component: {fileID: 635483089}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -946,6 +969,102 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &635483089
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635483084}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 653fc1a3eef69034ba41496bef5c58f5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &713239813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,8 +1124,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Her b\xF6l\xFCm i\xE7in 20 saniyen var! E\u011Fer s\xFCre biterse bir
     \xF6nceki b\xF6l\xFCme geri d\xF6nersin. Oyun i\xE7inde ESC basarak men\xFCye
-    ula\u015Fabilirsin.\n\nTa\u015F engeller ve lavlar rakipleri \xF6ld\xFCr\xFCr.\n\nDarbe
-    Oku: Dokundu\u011Fu tahtay\u0131 k\u0131rar.\n\nZaman Oku: Rakibe vurabilirsen
+    ula\u015Fabilirsin.\n\nSol T\u0131k: Ekran\u0131n herhangi bir noktas\u0131na
+    bas\u0131l\u0131 tutarak okun y\xF6n\xFCn\xFC ve h\u0131z\u0131n\u0131 ayarlayabilirsin.\n\nSa\u011F
+    T\u0131k: 3 ok aras\u0131nda ge\xE7i\u015F yapabilirsin.\n\nTa\u015F engeller,
+    lavlar ve rakiplerin birbirine \xE7arpmas\u0131 rakipleri \xF6ld\xFCr\xFCr.\n\nDarbeli
+    Ok: Dokundu\u011Fu tahtay\u0131 k\u0131rar.\n\nZaman Oku: Rakibe vurabilirsen
     10 saniye kazan\u0131rs\u0131n.\n\nK\u0131r\u0131lmaz Ok: K\u0131r\u0131lmad\u0131\u011F\u0131
     i\xE7in sekerek ilerler."
   m_isRightToLeft: 0
@@ -1035,8 +1157,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
